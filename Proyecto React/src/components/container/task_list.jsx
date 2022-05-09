@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import { LEVELS } from '../../models/levels.enum';
 import { Task } from '../../models/task.class'
 import TaskComponent from '../pure/task';
@@ -8,9 +8,19 @@ const TaskListComponent = () => {
 
     const defaultTask = new Task('Example', 'Default description', false, LEVELS.NORMAL);
 
+    // Estado del componente
+    const [taskList, setTasks] = useState([defaultTask]);
 
-    const changeState = (id) => {
-        console.log('TODO: cambiar estado de una tarea');
+    // Control del ciclo de vida del componente
+    useEffect(() => {
+        console.log('Task state has been modified');
+        
+        return () => {
+            console.log('TaskList component is going to unmount');
+        };
+    }, [taskList]);
+
+    const changeCompleted = (id) => {
         
     }
 
