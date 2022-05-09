@@ -9,6 +9,7 @@ import Ejemplo1 from './hooks/Ejemplo1';
 import Ejemplo2 from './hooks/Ejemplo2';
 import Ejemplo4 from './hooks/Ejemplo4';
 import MiComponenteConContexto from './hooks/Ejemplo3';
+import GreetingStyled from './components/pure/greetingStyled';
 
 function App() {
   return (
@@ -22,10 +23,13 @@ function App() {
         {/* Componente de listado de tareas */}
         {/* <ContactListComponent /> */}
         {/* Ejemplos de uso de HOOKS */}
-        <Ejemplo4 nombre="Antonio">
+
+
+        <GreetingStyled name='Antonio'/>
+        {/* <Ejemplo4 nombre="Antonio">
           {/* Todo lo que hay aquí dentro se tratará como props.children */}
-          <h3>Contenido del props.children</h3>
-        </Ejemplo4>
+          {/* <h3>Contenido del props.children</h3>
+        </Ejemplo4> */}
       </header>
     </div>
   );
