@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import {Contact} from '../../models/contact.class'
+import { Contact } from '../../models/contact.class'
 
 
-const ContactComponent = ({contact}) => {
+const ContactComponent = ({ contact, handleDeleteContact }) => {
 
-    const[isConnected, setStatus] = useState(false)
+    const [isConnected, setStatus] = useState(false)
 
     const connect = () => {
         setStatus(!isConnected)
@@ -14,22 +14,17 @@ const ContactComponent = ({contact}) => {
 
 
     return (
-        <div>
-            <h2>
-                Nombre: {contact.name} {contact.surname}
-            </h2>
-            <h3>
-                Email: {contact.email}
-            </h3>
-            <h4>
-                <input type="checkbox"
-                    onChange={connect} 
-                    checked={isConnected}
-                />
-                {isConnected ? 'Contacto en línea' : 'Contacto no disponible'}
-                
-            </h4>
-        </div>
+        <ul>
+            <li>
+                <span style={{ marginLeft: '30px' }}>Nombre: {contact.name} {contact.surname}</span>
+                <span style={{ marginLeft: '30px' }}>Email: {contact.email}</span>
+                <input style={{ marginLeft: '30px' }} type="checkbox" onChange={connect} checked={isConnected} />
+                <span style={{ marginLeft: '10px' }}>{isConnected ? 'Contacto en línea' : 'Contacto no disponible'}</span>
+                <span style={{ marginLeft: '30px' }}>
+                    <i onClick={() => handleDeleteContact(contact.email)} className="bi-trash" style={{ color: 'tomato', fontSize: '20px' }}></i>
+                </span>
+            </li>
+        </ul>
     );
 };
 

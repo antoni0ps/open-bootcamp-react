@@ -10,11 +10,12 @@ import Ejemplo2 from './hooks/Ejemplo2';
 import Ejemplo4 from './hooks/Ejemplo4';
 import MiComponenteConContexto from './hooks/Ejemplo3';
 import GreetingStyled from './components/pure/greetingStyled';
+import ExampleFather from './components/container/ExampleFather';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+      {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         {/* Dentro de App que es el componente que llama al componente "Greeting" tenemos que enviar las props que queramos que se muestren */}
         {/* <GreetingClass name="Antonio" /> */}
@@ -24,13 +25,15 @@ function App() {
         {/* <ContactListComponent /> */}
         {/* Ejemplos de uso de HOOKS */}
 
-
-        <GreetingStyled name='Antonio'/>
+        {/* <GreetingStyled name='Antonio'/> */}
         {/* <Ejemplo4 nombre="Antonio">
           {/* Todo lo que hay aquí dentro se tratará como props.children */}
           {/* <h3>Contenido del props.children</h3>
-        </Ejemplo4> */}
-      </header>
+        </Ejemplo4>  */}
+      {/* </header> */}
+      {/* Gestión de eventos */}
+      <TaskListComponent/>
+      
     </div>
   );
 }

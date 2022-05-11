@@ -5,6 +5,7 @@ import GreetingFunction from './components/pure/GreetingFunction';
 import TaskListComponent from './components/container/task_list';
 import ContactComponent from './components/pure/contact';
 import ContactListComponent from './components/container/contact_list';
+import { Clock, ClockHook } from './components/Exercises-sessions456';
 
 function App() {
   return (
@@ -16,7 +17,7 @@ function App() {
         {/* <GreetingFunction name="Antonio"/> */}
 
         {/* Componente de listado de tareas */}
-        <ContactListComponent />
+        <ClockHook/>
       </header>
     </div>
   );

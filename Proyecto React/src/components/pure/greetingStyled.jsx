@@ -1,6 +1,4 @@
-import { computeHeadingLevel } from "@testing-library/react";
 import React, { useState } from "react";
-import 
 
 /**
  * En este componente se muestra como se pueden dar estilos dentro del propio componente.
